@@ -1,0 +1,27 @@
+[
+  {
+    "name": "nginx",
+    "image": "057276272747.dkr.ecr.eu-west-2.amazonaws.com/mm-test-prv:nginx-proxy",
+    "cpu": 10,
+    "memory": 256,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 80
+      }
+    ],
+
+
+    "links": [
+      "ao"
+    ]
+  },
+  {
+    "name": "ao",
+    "image": "057276272747.dkr.ecr.eu-west-2.amazonaws.com/mm-test-prv:ao",
+    "memory": 256,
+    "cpu": 10,
+    "essential": true
+  }
+]
+  
