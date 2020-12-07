@@ -34,7 +34,7 @@ resource "aws_codepipeline" "codepipeline" {
 
     configuration = {
         Owner      = "MPM3278"
-        Repo       = "https://github.com/ao-com/ao-docker-tech-test"
+        Repo       = "https://github.com/MPM3278/ao-docker-tech-test"
         Branch     = "ao"
         OAuthToken = "${aws_codebuild_source_credential.github-mpm3278.id}"
       }
