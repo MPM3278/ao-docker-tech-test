@@ -42,26 +42,6 @@ resource "aws_codepipeline" "codepipeline" {
     }
   }
 
-    stage {
-    name = "Source"
-
-    action {
-      name             = "AOApp"
-      category         = "Source"
-      owner            = "ThirdParty"
-      provider         = "GitHub"
-      version          = "1"
-      output_artifacts = ["${aws_s3_bucket.codepipeline_bucket.id}"]
-
-    configuration = {
-        Owner      = "MPM3278"
-        Repo       = "https://github.com/ao-com/ao-docker-tech-test"
-        Branch     = "ao"
-        OAuthToken = "${aws_codebuild_source_credential.github-mpm3278.id}"
-      }
-
-    }
-  }
 
     stage {
     name = "Build"
