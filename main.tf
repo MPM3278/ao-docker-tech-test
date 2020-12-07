@@ -8,4 +8,4 @@ provider "aws" {
 }
 
 
-### This code is for the AO Technical task, all code has been written in a nodular fashion for reproducibility. ###
+### This code is for the AO Technical task, Main Infrastructure has been written in a modular fashion for reproducibility. ###
