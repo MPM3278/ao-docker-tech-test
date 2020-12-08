@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_ecr_repository" "ao-mm-repo" {
-  name                 = "ao-mm-ecr"
+  name                 = "ao-mm-repo"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {

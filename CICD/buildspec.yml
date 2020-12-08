@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=057276272747.dkr.ecr.eu-west-2.amazonaws.com/ao-mm-ecr
+      - REPOSITORY_URI=057276272747.dkr.ecr.eu-west-2.amazonaws.com/ao-mm-repo
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=ao
   build:
